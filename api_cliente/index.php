@@ -208,22 +208,26 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="dashboard-container">
     <!-- Botón de regreso al dashboard -->
     <a href="../views/dashboard.php" class="back-button">
-      </i> Regresar al Dashboard
+      <i class="fas fa-arrow-left"></i> Regresar al Dashboard
     </a>
     <div class="card">
-      <h2></i> Buscador de Hoteles</h2>
+      <h2><i class="fas fa-hotel"></i> Buscador de Hoteles</h2>
       <form id="frmApi">
-        <input type="hidden" id="token" value="">
         <div class="search-box">
-          <input type="text" id="search" placeholder="Buscar por nombre, servicio, dirección o ubicación..." autocomplete="off" oninput="buscarHoteles()">
+          <input
+            type="text"
+            id="search"
+            placeholder="Buscar por nombre, servicio, dirección o ubicación..."
+            autocomplete="off"
+            oninput="buscarHoteles()"
+          >
           <button type="button" id="btn_buscar" onclick="buscarHoteles()">
-            </i> Buscar
+            <i class="fas fa-search"></i> Buscar
           </button>
         </div>
       </form>
@@ -231,6 +235,11 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('search').oninput = buscarHoteles;
+    });
+  </script>
   <script src="js/api.js"></script>
 </body>
 </html>

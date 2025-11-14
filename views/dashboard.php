@@ -173,13 +173,13 @@ table tr:hover {
 
     <!-- Acciones rápidas -->
     <div class="quick-actions">
-      </i> Acciones Rápidas</h3>
+      <h3><i class="fas fa-rocket"></i> Acciones Rápidas</h3>
       <div class="btn-container">
         <a href="<?php echo BASE_URL; ?>views/tokens_list.php" class="btn btn-primary">
-          </i> Mis Tokens API
+          <i class="fas fa-key"></i> Mis Tokens API
         </a>
         <a href="<?php echo BASE_URL; ?>api_cliente/" class="btn btn-primary" target="">
-          </i> Probar API Cliente
+          <i class="fas fa-external-link-alt"></i> Probar API Cliente
         </a>
       </div>
     </div>

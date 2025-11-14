@@ -1,9 +1,16 @@
+// api_cliente/js/api.js
 let debounceTimer;
 
 async function buscarHoteles() {
-    const search = document.getElementById('search').value.trim();
-    const token = document.getElementById('token').value;
+    const searchInput = document.getElementById('search');
     const resultadosDiv = document.getElementById('resultados');
+
+    if (!searchInput) {
+        console.error('Error: No se encontró el elemento #search');
+        return;
+    }
+
+    const search = searchInput.value.trim();
 
     // Limpiar resultados si el campo está vacío
     if (!search) {
@@ -27,10 +34,9 @@ async function buscarHoteles() {
     debounceTimer = setTimeout(async () => {
         try {
             const formData = new FormData();
-            formData.append('token', token);
             formData.append('search', search);
 
-            const response = await fetch('api_handler.php?action=buscarHoteles', {
+            const response = await fetch('api_handler.php', {
                 method: 'POST',
                 body: formData
             });
@@ -59,7 +65,6 @@ async function buscarHoteles() {
 
             let html = '';
             data.data.forEach(hotel => {
-                // Resaltar las coincidencias en los resultados
                 const highlight = (text) => {
                     if (!text) return '';
                     const regex = new RegExp(search, 'gi');

@@ -95,7 +95,7 @@ require_once __DIR__ . '/include/header.php';
 
 <div class="container fade-in">
     <div class="dashboard-container">
-        <h2></i> Actualizar Token</h2>
+        <h2><i class="fas fa-edit"></i> Actualizar Token</h2>
         <form method="POST" action="">
             <input type="hidden" name="token_viejo" value="<?php echo htmlspecialchars($token_value); ?>">
             <div style="margin-bottom: 1rem;">
@@ -103,7 +103,7 @@ require_once __DIR__ . '/include/header.php';
                 <input type="text" id="nuevo_token" name="nuevo_token" value="<?php echo htmlspecialchars($token ? $token['token'] : ''); ?>" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
             </div>
             <button type="submit" name="actualizar_token" class="btn btn-primary">
-                </i> Guardar Cambios
+                <i class="fas fa-save"></i> Guardar Cambios
             </button>
         </form>
     </div>

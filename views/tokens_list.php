@@ -108,7 +108,7 @@ require_once __DIR__ . '/include/header.php';
 
 <div class="container fade-in">
     <div class="dashboard-container">
-        <h2></i> Tokens API</h2>
+        <h2><i class="fas fa-key"></i> Mis Tokens API</h2>
         <p>Aquí puedes ver y actualizar tus tokens de acceso a la API.</p>
         <div class="table-container">
             <table class="table">
@@ -129,7 +129,7 @@ require_once __DIR__ . '/include/header.php';
     </td>
     <td>
         <a href="<?php echo BASE_URL; ?>views/token_form.php?edit=<?php echo urlencode($token['token']); ?>" class="btn btn-small btn-warning">
-            </i> Actualizar
+            <i class="fas fa-edit"></i> Actualizar
         </a>
     </td>
 </tr>
